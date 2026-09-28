@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TrialLens | ClinicalTrials.gov Explorer</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div><p class="eyebrow">ClinicalTrials.gov · API v2</p><h1>TrialLens</h1><p class="subhead">Ask a research question. Get an evidence-linked visualization.</p></div><span class="badge">Live data</span></header>
+    <section class="panel query-panel">
+      <label for="query">Research question</label>
+      <div class="query-row"><input id="query" value="How has the number of trials for pembrolizumab changed per year since 2015?" aria-label="Research question"><button id="run">Visualize <span>↗</span></button></div>
+      <div class="filters"><label>Drug<input id="drug" value="pembrolizumab" placeholder="e.g., pembrolizumab"></label><label>Condition<input id="condition" placeholder="e.g., melanoma"></label><label>Start year<input id="startYear" type="number" min="1900" max="2100" value="2015"></label><label>Country<input id="country" placeholder="e.g., United States"></label></div>
+      <div class="chips"><button data-example="How has the number of trials for pembrolizumab changed per year since 2015?" data-drug="pembrolizumab" data-year="2015">Time trend</button><button data-example="What are the most common phases for melanoma trials?" data-condition="melanoma">Phase distribution</button><button data-example="Which countries have the most recruiting trials for diabetes?" data-condition="diabetes">Geographic pattern</button><button data-example="Show a sponsor drug network for lung cancer trials." data-condition="lung cancer">Network</button></div>
+    </section>
+    <section id="status" class="status" aria-live="polite">Ready for a question.</section>
+    <section id="results" class="results hidden"><div class="chart-head"><div><p id="chartType" class="eyebrow"></p><h2 id="chartTitle"></h2></div><button id="download" class="secondary">Download JSON</button></div><div id="chart" class="chart" aria-label="Visualization"></div><aside class="details"><div><strong id="count">0</strong><span>records retrieved</span></div><div><strong id="intent">—</strong><span>query interpretation</span></div><div><strong>Traceable</strong><span>every datum links to studies</span></div></aside><section><h3>Evidence trail</h3><div id="citations" class="citations"></div></section></section>
+    <footer>Results use records returned by ClinicalTrials.gov. Counts reflect the retrieved API result set.</footer>
+  </main><script src="/static/app.js"></script>
+</body></html>
